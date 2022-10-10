@@ -17,16 +17,25 @@ public class Insertion
   public static int[] sort(int[] arr) {
     // Your algorithm goes here!
     int[] arr2 = arr;
-    int arri = 0;
-    int arr0 = 0;
+    int savePoint = 0;
+    int i1 = 0;
+    int i0 = 0;
     int[] done; 
     for (int i=1; i<arr2.length; i++) {
       if (arr2[i] < arr2[i-1]) {
-        arri = arr2[i];
-        arr0= arr2[i-1] ;
-        arr2[i] = arr0;
-        arr2[i-1] = arri;
-        i=i-1;
+        savePoint = i;
+        i1 = arr2[i];
+        i0 = arr2[i-1] ;
+        arr2[i] = i0;
+        arr2[i-1] = i1;
+        if (i == 1)
+        {
+            i=i-1;
+        }
+        else
+        {
+            i=i-2;    
+        }
       }
     }
     done = arr2;
