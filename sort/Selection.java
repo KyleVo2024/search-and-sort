@@ -16,7 +16,14 @@ public class Selection
    */
   public static int[] sort(int[] arr) {
     // Your algorithm goes here!
-
+    int arr2 [] = arr;
+    int winner;
+    for (int i=0; i<arr2.length; i++) {
+        if(arr2 [i+1]< arr2 [i]){
+            winner= i+1; 
+        }
+    }
+    return arr2;
   }
   
   public static void main(String[] args) {
