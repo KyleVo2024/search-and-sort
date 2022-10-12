@@ -61,6 +61,8 @@ public class Insertion
             }
         }
         System.out.println("SUCCESS!");
+        for (int i=0; i<arr.length-1; i++) {
+            System.out.print(arr[i]+",");
+        }
     }
-
 }
